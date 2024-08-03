@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { updateProduct } from "../redux/slice";
 import axios from "axios";
-
+import { setProducts } from "../redux/slice";
 const QuickEdit = ({ product, setEditingProductId }) => {
   const dispatch = useDispatch();
   const [details, setDetails] = useState({
