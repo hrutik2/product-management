@@ -16,7 +16,7 @@
       "productName": "Rod",
       "price": 200,
       "shape": "box",
-      "length": "100"
+      "length": "1002"
     },
     {
       "id": "3",
@@ -30,6 +30,22 @@
       "product": "Stainless Steel A2 Rod",
       "material": "Stainless Steel",
       "productName": "Rod",
+      "price": 200,
+      "shape": "round",
+      "length": "100"
+    },
+    {
+      "id": 5,
+      "product": "Plastic A2 Sheet",
+      "material": "Plastic",
+      "productName": "Sheet",
+      "price": 200
+    },
+    {
+      "id": 6,
+      "product": "Plastic A3 Sheet",
+      "material": "Plastic",
+      "productName": "Sheet",
       "price": 200
     }
   ]

@@ -178,6 +178,7 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
     setAvailableMaterials([]);
     setAvailableGrades([]);
     setMatrial("");
+    
   };
 
   const feactdata = (obj) => {

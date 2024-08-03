@@ -27,6 +27,8 @@ const ProductList = () => {
   const [product, setProduct] = useState(products);
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+    setFilterMaterial("")
+    setFilterProduct("");
   };
 
   const handleFilterChange = (e) => {
@@ -35,6 +37,8 @@ const ProductList = () => {
 
   const toggleQuickEdit = (productId) => {
     setEditingProductId(productId);
+    setFilterMaterial("")
+    setFilterProduct("");
   };
 
   useEffect(() => {
