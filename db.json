@@ -1,0 +1,34 @@
+{
+  "Product": [
+    {
+      "id": "1",
+      "product": "Copper B1 Rod",
+      "material": "Copper",
+      "productName": "Rod",
+      "price": 200,
+      "shape": "round",
+      "length": "1001"
+    },
+    {
+      "id": "2",
+      "product": "Copper B1 Rod",
+      "material": "Copper",
+      "productName": "Rod",
+      "price": 200
+    },
+    {
+      "id": "3",
+      "product": "Copper F1 Rod",
+      "material": "Copper",
+      "productName": "Rod",
+      "price": 200
+    },
+    {
+      "id": "4",
+      "product": "Stainless Steel A2 Rod",
+      "material": "Stainless Steel",
+      "productName": "Rod",
+      "price": 200
+    }
+  ]
+}
