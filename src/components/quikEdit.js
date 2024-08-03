@@ -31,7 +31,7 @@ const QuickEdit = ({ product, setEditingProductId }) => {
       .patch(`http://localhost:4000/Product/${id}`, obj)
       .then((response) => {
         console.log(response.data);
-        dispatch(setProducts(response.data));
+        
       })
       .catch((error) => {
         console.error("There was an error updating the data:", error);

@@ -7,14 +7,16 @@
       "productName": "Rod",
       "price": 200,
       "shape": "round",
-      "length": "1001"
+      "length": "1002"
     },
     {
       "id": "2",
       "product": "Copper B1 Rod",
       "material": "Copper",
       "productName": "Rod",
-      "price": 200
+      "price": 200,
+      "shape": "box",
+      "length": "100"
     },
     {
       "id": "3",
