@@ -1,4 +1,8 @@
-<h1>Assignment Title:  Directory Listing<h1/>
+<h1 align="center">Assignment Title:  Directory Listing<h1/>
 <div>
-<p>Tech Stack: React, Redux Toolkit</p>
+<p><b>Tech Stack:</b> React, Redux Toolkit</p>
+</div>
+<div>
+  <p>Product List Page</p>
+  
 </div>
