@@ -42,6 +42,7 @@ const QuickEdit = ({ product, setEditingProductId }) => {
     <tr>
       <td colSpan="4">
         <div className="quick-edit">
+          <h3 style={{textAlign:"center"}}>QuickEdit</h3>
           <div id="productDetails">
             <h3>Product Name : {product.product}</h3>
             <h3>Price : {product.price} / kg</h3>
