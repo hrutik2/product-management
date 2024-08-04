@@ -61,12 +61,20 @@ const ProductList = () => {
   }, [filterproduct, filterMaterial,products]);
 
   useEffect(() => {
-    feactdata();
+    if(feactdata()){
+      console.log(feactdata())
+    }
+    else{
+      let product=[{id: "1",product: "Copper B1 Rod",material: "Copper",productName: "Rod", price: 200, shape: "round", length: "1002"}]
+      dispatch(setProducts(product))
+  }
+
   }, []);
   const feactdata = () => {
     axios.get("http://localhost:4000/Product")
       .then((response) => {
         console.log(response.data);
+      
         dispatch(setProducts(response.data));
       })
       .catch((error) => {
@@ -93,10 +101,10 @@ const ProductList = () => {
             Add Products
           </button>
           <span style={{ marginLeft: "10px", fontSize: "20px" }}>
-            {" "}
+            
             <b>
-              Total Product :{product.length} /{products.length}{" "}
-            </b>{" "}
+              Total Product :{product.length} /{products.length}
+            </b>
           </span>
         </div>
         <div className="filters">
@@ -104,6 +112,7 @@ const ProductList = () => {
             name="product"
             value={filterproduct}
             onChange={handleFilterChange}
+            style={{width:"200px",padding:"5px", marginLeft:"10px",borderRadius:"10px"}}
           >
             <option value="">Select Product</option>
             {filters.map((products) => (
@@ -116,6 +125,8 @@ const ProductList = () => {
             name="material"
             value={filterMaterial}
             onChange={(e) => setFilterMaterial(e.target.value)}
+            style={{width:"200px",padding:"5px", marginLeft:"10px",borderRadius:"10px"}}
+          
           >
             <option value="">Select Material</option>
             {Material.map((material) => (
