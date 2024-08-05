@@ -38,7 +38,7 @@
   1. Clone the repository:
 
    ```sh
-   git clone https://github.com/hrutik2/product-management
+    https://github.com/hrutik2/product-management
    ```
 
 
