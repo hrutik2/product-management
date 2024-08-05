@@ -153,7 +153,7 @@ const ProductList = () => {
             }
           </thead>
           <tbody>
-        {products.map((product) => (
+        {product.map((product) => (
           <React.Fragment key={product.id}>
             {editingProductId === product.id ? (
               <QuickEdit
