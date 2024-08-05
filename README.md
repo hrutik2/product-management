@@ -24,10 +24,35 @@
    <img src="https://github.com/hrutik2/product-management/blob/master/public/home%20page.png"/>
 </div>
 <div>
-  <p>Add Product</p>
+  <h1>Add Product</h1>
    <img src="https://github.com/hrutik2/product-management/blob/master/public/add.png"/>
 </div>
 <div>
-  <p>Edit Product</p>
+  <h1>Edit Product</h1>
   <img src="https://github.com/hrutik2/product-management/blob/master/public/Edit.png"/>
+</div>
+
+</br>
+<div>
+  <h1>Installation</h1>
+  1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/hrutik2/product-management
+   ```
+
+
+
+2. install the required dependencies:
+
+   ```sh
+   npm install
+   ```
+
+3. start the frontend server:
+
+   ```sh
+   npm run start
+   ```
+
 </div>
