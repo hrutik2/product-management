@@ -6,8 +6,8 @@
   </div>
 <div>
 <h3>Tech Stack:</h3>
-</br>
-<b>react:</b> For building the user interface.
+
+<b>React:</b> For building the user interface.
 <b>Redux Toolkit: </b> For state management.
 </div>
 <div>
