@@ -31,7 +31,6 @@ const QuickEdit = ({ product, setEditingProductId }) => {
       .patch(`http://localhost:4000/Product/${id}`, obj)
       .then((response) => {
         console.log(response.data);
-        
       })
       .catch((error) => {
         console.error("There was an error updating the data:", error);
@@ -42,65 +41,75 @@ const QuickEdit = ({ product, setEditingProductId }) => {
     <tr>
       <td colSpan="4">
         <div className="quick-edit">
-          <p style={{textAlign:"left"}}>Quick Edit</p>
+          <p style={{ textAlign: "left" }}>Quick Edit</p>
           <div id="productDetails">
             <p>Product Name : {product.product}</p>
             <p>Price : {product.price} / kg</p>
           </div>
           <div style={{ width: "100%", borderBottom: "1px solid black" }}></div>
-          
-          <div style={{marginTop:"10px"}}>
-            <p> <b>product Details</b></p>
-          
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              
-              marginTop: "30px",
-            }}
+
+          <div style={{ marginTop: "10px" }}>
+            <p>
+              {" "}
+              <b>product Details</b>
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+
+                marginTop: "30px",
+              }}
+            >
+              <div>
+                <label>
+                  <b>Shape</b>
+                </label>
+                <input
+                  name="shape"
+                  value={details.shape}
+                  onChange={handleChange}
+                  placeholder="Shape"
+                  style={{
+                    marginLeft: "10px",
+                    padding: "5px",
+                    borderRadius: "15px",
+                    width: "70%",
+                  }}
+                />
+              </div>
+              <div>
+                <label>
+                  <b>Length</b>
+                </label>
+                <input
+                  name="length"
+                  value={details.length}
+                  onChange={handleChange}
+                  placeholder="Length"
+                  style={{
+                    marginLeft: "10px",
+                    padding: "5px",
+                    borderRadius: "15px",
+                    width: "60%",
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            onClick={handleSubmit}
+            id="Button"
+            style={{ width: "150px", marginRight: "30px" }}
           >
-            <div>
-              <label>
-                <b>Shape</b>
-              </label>
-              <input
-                name="shape"
-                value={details.shape}
-                onChange={handleChange}
-                placeholder="Shape"
-                style={{
-                  marginLeft: "10px",
-                  padding: "5px",
-                  borderRadius: "15px",
-                  width: "70%",
-                }}
-              />
-            </div>
-            <div>
-              <label>
-                <b>Length</b>
-              </label>
-              <input
-                name="length"
-                value={details.length}
-                onChange={handleChange}
-                placeholder="Length"
-                style={{
-                  marginLeft: "10px",
-                  padding: "5px",
-                  borderRadius: "15px",
-                  width: "60%",
-                }}
-              />
-            </div>
-          </div>
-          </div>
-          <button onClick={handleSubmit} id="Button" style={{width:"150px", marginRight:"30px"}}>
-            
             Update
           </button>
-          <button onClick={() => setEditingProductId(null)} id="Button" style={{width:"150px", marginRight:"30px"}}>
+          <button
+            onClick={() => setEditingProductId(null)}
+            id="Button"
+            style={{ width: "150px", marginRight: "30px" }}
+          >
             Cancel
           </button>
         </div>

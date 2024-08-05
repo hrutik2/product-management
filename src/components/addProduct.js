@@ -120,8 +120,6 @@ const productData = {
 export const products = Object.keys(productData);
 
 const AddProductModal = ({ productsLength, setIsModalOpen }) => {
-  ;
-
   const dispatch = useDispatch();
   const [newProducts, setNewProducts] = useState([]);
   const [Product, setProduct] = useState();
@@ -178,7 +176,6 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
     setAvailableMaterials([]);
     setAvailableGrades([]);
     setMatrial("");
-    
   };
 
   const feactdata = (obj) => {
@@ -194,11 +191,13 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
 
   return (
     <div className="add-product-modals">
-      <h3 style={{textAlign:"left",marginLeft:"50px"}}>Add product</h3>
+      <h3 style={{ textAlign: "left", marginLeft: "50px" }}>Add product</h3>
       <div className="add-product-modal">
         <div className="productDiv">
           <>
-            <p><b>Products</b></p>
+            <p>
+              <b>Products</b>
+            </p>
           </>
           <select
             name="product"
@@ -218,7 +217,9 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
           </select>
         </div>
         <div className="materailDiv">
-        <p><b>Material</b></p>
+          <p>
+            <b>Material</b>
+          </p>
           <select
             name="material"
             value={Material}
@@ -238,7 +239,9 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
           </select>
         </div>
         <div className="GradeDiv">
-        <p><b>Grades</b></p>
+          <p>
+            <b>Grades</b>
+          </p>
           <select
             name="grade"
             multiple={true}
@@ -246,26 +249,38 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
             onChange={handleGradeChange}
             disabled={!Material}
           >
-         {availableGrades.map((grade) => (
+            {availableGrades.map((grade) => (
               <option
                 key={grade}
                 value={grade}
                 className={Grades.includes(grade) ? "selected" : "nonselected"}
               >
-              <div style={{display :"flex", width:"100%", justifyContent:"space-between"}}>
-                <div>
-                  {grade}
+                <div
+                  style={{
+                    display: "flex",
+                    width: "100%",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div>{grade}</div>
+                  <div>
+                    <input
+                      type="checkbox"
+                      checked={Grades.includes(grade)}
+                      style={{ display: "block" }}
+                    ></input>
+                  </div>
                 </div>
-                <div>
-                  <input type="checkbox" checked={Grades.includes(grade)} style={{display:"block"}}></input>
-                </div>
-              </div>
               </option>
             ))}
           </select>
         </div>
       </div>
-      <button onClick={handleSubmit} id="Button" style={{width:"20%",backgroundColor:"aqua",color:"black"}}>
+      <button
+        onClick={handleSubmit}
+        id="Button"
+        style={{ width: "20%", backgroundColor: "aqua", color: "black" }}
+      >
         Submit
       </button>
     </div>
