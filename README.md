@@ -1,4 +1,4 @@
-<h1 align="center">Assignment Title:  Directory Listing<h1/>
+<h1 align="center">Assignment Title:  Directory Listing</h1>
   <div>
     <b>Description</b>
     The Product Directory Listing app is a web tool for managing and displaying products, built with React, Redux Toolkit
