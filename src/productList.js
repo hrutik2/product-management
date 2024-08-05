@@ -17,7 +17,7 @@ const Material = [
   "Plastic",
   "Steel",
   "Carbon Steel",
-  " Titanium",
+  "Titanium",
 ];
 const ProductList = () => {
   const dispatch = useDispatch();
