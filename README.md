@@ -1,11 +1,13 @@
 <h1 align="center">Assignment Title:  Directory Listing</h1>
   <div>
     <b>Description</b>
+  </br>
     The Product Directory Listing app is a web tool for managing and displaying products, built with React, Redux Toolkit
   </div>
 <div>
-<p><b>Tech Stack:</b></p>
-  <b>React:</b> For building the user interface.
+<h3>Tech Stack:</h3>
+</br>
+<b>react:</b> For building the user interface.
 <b>Redux Toolkit: </b> For state management.
 </div>
 <div>
