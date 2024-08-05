@@ -40,9 +40,6 @@
    ```sh
     https://github.com/hrutik2/product-management
    ```
-
-
-
 2. install the required dependencies:
 
    ```sh
