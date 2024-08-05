@@ -1,12 +1,12 @@
 <h1 align="center">Assignment Title:  Directory Listing<h1/>
   <div>
     <b>Description</b>
-    <p>The Product Directory Listing app is a web tool for managing and displaying products, built with React, Redux Toolkit</p>
+    The Product Directory Listing app is a web tool for managing and displaying products, built with React, Redux Toolkit
   </div>
 <div>
 <p><b>Tech Stack:</b></p>
-  <p><b>React:</b> For building the user interface.</p>
-<p><b>Redux Toolkit: </b> For state management.</p>
+  <b>React:</b> For building the user interface.
+<b>Redux Toolkit: </b> For state management.
 </div>
 <div>
   <p>Product List Page</p>
