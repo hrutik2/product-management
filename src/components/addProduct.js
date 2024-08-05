@@ -194,11 +194,11 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
 
   return (
     <div className="add-product-modals">
-      <h3>Add product</h3>
+      <h3 style={{textAlign:"left",marginLeft:"50px"}}>Add product</h3>
       <div className="add-product-modal">
-        <div>
+        <div className="productDiv">
           <>
-            <b>Product</b>
+            <p><b>Products</b></p>
           </>
           <select
             name="product"
@@ -217,8 +217,8 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
             ))}
           </select>
         </div>
-        <div>
-          <>Material</>
+        <div className="materailDiv">
+        <p><b>Material</b></p>
           <select
             name="material"
             value={Material}
@@ -237,8 +237,8 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
             ))}
           </select>
         </div>
-        <div>
-          <>Grades</>
+        <div className="GradeDiv">
+        <p><b>Grades</b></p>
           <select
             name="grade"
             multiple={true}
@@ -246,26 +246,26 @@ const AddProductModal = ({ productsLength, setIsModalOpen }) => {
             onChange={handleGradeChange}
             disabled={!Material}
           >
-            {availableGrades.map((grade) => (
+         {availableGrades.map((grade) => (
               <option
                 key={grade}
                 value={grade}
                 className={Grades.includes(grade) ? "selected" : "nonselected"}
               >
-                <label for="scales">
-                  {grade}{" "}
-                  <input
-                    type="checkbox"
-                    style={{ border: "1px solid black" }}
-                    readOnly
-                  />
-                </label>
+              <div style={{display :"flex", width:"100%", justifyContent:"space-between"}}>
+                <div>
+                  {grade}
+                </div>
+                <div>
+                  <input type="checkbox" checked={Grades.includes(grade)} style={{display:"block"}}></input>
+                </div>
+              </div>
               </option>
             ))}
           </select>
         </div>
       </div>
-      <button onClick={handleSubmit} id="Button">
+      <button onClick={handleSubmit} id="Button" style={{width:"20%",backgroundColor:"aqua",color:"black"}}>
         Submit
       </button>
     </div>

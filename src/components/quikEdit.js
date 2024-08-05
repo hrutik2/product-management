@@ -42,18 +42,22 @@ const QuickEdit = ({ product, setEditingProductId }) => {
     <tr>
       <td colSpan="4">
         <div className="quick-edit">
-          <h3 style={{textAlign:"center"}}>QuickEdit</h3>
+          <p style={{textAlign:"left"}}>Quick Edit</p>
           <div id="productDetails">
-            <h3>Product Name : {product.product}</h3>
-            <h3>Price : {product.price} / kg</h3>
+            <p>Product Name : {product.product}</p>
+            <p>Price : {product.price} / kg</p>
           </div>
+          <div style={{ width: "100%", borderBottom: "1px solid black" }}></div>
+          
+          <div style={{marginTop:"10px"}}>
+            <p> <b>product Details</b></p>
+          
           <div
             style={{
               display: "flex",
-              justifyContent: "space-around",
-              paddingLeft: "10px",
-              paddingRight: "10px",
-              margin: "10px",
+              justifyContent: "space-between",
+              
+              marginTop: "30px",
             }}
           >
             <div>
@@ -69,7 +73,7 @@ const QuickEdit = ({ product, setEditingProductId }) => {
                   marginLeft: "10px",
                   padding: "5px",
                   borderRadius: "15px",
-                  width: "50%",
+                  width: "70%",
                 }}
               />
             </div>
@@ -86,16 +90,17 @@ const QuickEdit = ({ product, setEditingProductId }) => {
                   marginLeft: "10px",
                   padding: "5px",
                   borderRadius: "15px",
-                  width: "50%",
+                  width: "60%",
                 }}
               />
             </div>
           </div>
-          <button onClick={handleSubmit} id="Button">
-            {" "}
+          </div>
+          <button onClick={handleSubmit} id="Button" style={{width:"150px", marginRight:"30px"}}>
+            
             Update
           </button>
-          <button onClick={() => setEditingProductId(null)} id="Button">
+          <button onClick={() => setEditingProductId(null)} id="Button" style={{width:"150px", marginRight:"30px"}}>
             Cancel
           </button>
         </div>

@@ -97,8 +97,8 @@ const ProductList = () => {
       </div>
       <div className={isModalOpen ? "productlisit" : "product-list"}>
         <div>
-          <button onClick={toggleModal} id="Button">
-            Add Products
+          <button onClick={toggleModal} id="Button" style={{width:"200px"}}>
+           +   Add Products
           </button>
           <span style={{ marginLeft: "10px", fontSize: "20px" }}>
             
@@ -112,9 +112,9 @@ const ProductList = () => {
             name="product"
             value={filterproduct}
             onChange={handleFilterChange}
-            style={{width:"200px",padding:"5px", marginLeft:"10px",borderRadius:"10px"}}
+            style={{width:"300px",padding:"5px", marginLeft:"10px",borderRadius:"10px"}}
           >
-            <option value="">Select Product</option>
+            <option value="">Product</option>
             {filters.map((products) => (
               <option key={products} value={products}>
                 {products}
@@ -125,10 +125,10 @@ const ProductList = () => {
             name="material"
             value={filterMaterial}
             onChange={(e) => setFilterMaterial(e.target.value)}
-            style={{width:"200px",padding:"5px", marginLeft:"10px",borderRadius:"10px"}}
+            style={{width:"300px",padding:"5px", marginLeft:"10px",borderRadius:"10px"}}
           
           >
-            <option value="">Select Material</option>
+            <option value="">Material</option>
             {Material.map((material) => (
               <option key={material} value={material}>
                 {material}
@@ -139,53 +139,56 @@ const ProductList = () => {
 
         <table id="productTable">
           <thead>
-            <tr>
+            {editingProductId?<tr>
               <th>Product</th>
+              <th>Actions</th>
+              <th>Price</th>
+            </tr>:
+            <tr>
+            <th>Product</th>
               <th>Actions</th>
               <th>Description</th>
               <th>Price</th>
             </tr>
+            }
           </thead>
           <tbody>
-            {product.map((product) => (
-              <React.Fragment key={product.id}>
-                {editingProductId === product.id ? (
-                  <QuickEdit
-                    product={product}
-                    setEditingProductId={setEditingProductId}
-                  />
-                ) : (
-                  <tr>
-                    <td> {product.product}</td>
-                    <td>
-                      <button
-                        onClick={() => toggleQuickEdit(product.id)}
-                        id="button"
-                      >
-                        Quick Edit | Add product details
-                      </button>
-                    </td>
-                    <td id="description">
-                      Material : {product.material}
-                      <br></br>
-                      {product.length ? (
-                        <>Product Length: {product.length}</>
-                      ) : (
-                        ""
-                      )}
-                      <br></br>
-                      {product.shape ? <>Product shape: {product.shape}</> : ""}
-                    </td>
-                    <td>{product.price}/kg</td>
-                  </tr>
+        {products.map((product) => (
+          <React.Fragment key={product.id}>
+            {editingProductId === product.id ? (
+              <QuickEdit
+                product={product}
+                setEditingProductId={setEditingProductId}
+              />
+            ) : (
+              <tr>
+                <td><b>{product.product}</b></td>
+                <td>
+                  <button
+                    onClick={() => toggleQuickEdit(product.id)}
+                    id="button"
+                  >
+                    Quick Edit | Add product details
+                  </button>
+                </td>
+                {!editingProductId && (
+                  <td id="description">
+                    Material: {product.material}
+                    <br />
+                    {product.length && <>Product Length: {product.length}<br /></>}
+                    {product.shape && <>Product Shape: {product.shape}<br /></>}
+                  </td>
                 )}
-              </React.Fragment>
-            ))}
-          </tbody>
+                <td>{product.price}/kg</td>
+              </tr>
+            )}
+          </React.Fragment>
+        ))}
+      </tbody>
         </table>
       </div>
     </>
   );
 };
-
+              
 export default ProductList;
